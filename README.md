@@ -1,4 +1,4 @@
-![Autonomous robot](docs/final1.jpg)
+![Autonomous robot](docs/finalRobot.jpg)
 
 # Autonomous Mobile Robot
 
