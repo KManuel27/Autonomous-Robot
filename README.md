@@ -9,7 +9,7 @@
 An Arduino-based mobile robot developed to explore autonomous navigation,
 embedded control and Bluetooth Low Energy communication.
 
-**Portfolio:** [View the full project here]()
+**Portfolio:** [View the full project here](https://kmanuel27.github.io/project-autonomous-robot.html)
 
 The robot supports three operating modes:
 
