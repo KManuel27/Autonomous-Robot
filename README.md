@@ -1,7 +1,7 @@
 # Autonomous Mobile Robot
 
 <p align="center">
-  <img src="docs/finalRobot.png"
+  <img src="docs/finalRobot.jpg"
        alt="Final robot"
        width="700">
 </p>
