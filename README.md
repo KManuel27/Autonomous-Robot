@@ -1,3 +1,5 @@
+![Autonomous robot](docs/final1.jpg)
+
 # Autonomous Mobile Robot
 
 An Arduino-based mobile robot developed to explore autonomous navigation,
