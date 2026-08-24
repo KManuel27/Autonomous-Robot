@@ -1,9 +1,15 @@
-![Autonomous robot](docs/finalRobot.jpg)
-
 # Autonomous Mobile Robot
+
+<p align="center">
+  <img src="docs/finalRobot.png"
+       alt="Final robot"
+       width="700">
+</p>
 
 An Arduino-based mobile robot developed to explore autonomous navigation,
 embedded control and Bluetooth Low Energy communication.
+
+**Portfolio:** [View the full project here]()
 
 The robot supports three operating modes:
 
@@ -12,8 +18,7 @@ The robot supports three operating modes:
 - **Autonomous** – reactive obstacle avoidance using an ultrasonic sensor
   mounted on a servo.
 
-The final control interface was developed in Python using Tkinter and Bleak
-and communicates wirelessly with the Arduino through an HM-10 BLE module.
+The final control interface was developed in **Python**, using **Tkinter** for the GUI and **Bleak** for Bluetooth Low Energy communication.
 
 ## Features
 
@@ -55,6 +60,14 @@ The Python application uses:
 Movement and mode commands are transmitted to an HM-10 BLE module, which
 forwards them to the Arduino over serial.
 
+### Electrical Architecture
+
+<p align="center">
+  <img src="docs/electrical_diagram.png"
+       alt="Electrical architecture"
+       width="750">
+</p>
+
 ## Operating Modes
 
 ### Manual
@@ -78,6 +91,16 @@ using a servo to measure the available space on either side. It then turns
 towards the clearer path or reverses if neither side provides sufficient
 clearance.
 
+### Autonomous Navigation Logic
+
+The autonomous navigation logic is summarised in the flowchart below.
+
+<p align="center">
+  <img src="docs/software_diagram.png"
+       alt="Autonomous navigation flowchart"
+       width="700">
+</p>
+
 ## Software Architecture
 
 ```text
@@ -96,3 +119,25 @@ Tkinter + Bleak
 Motors    Sensors
            |
      Ultrasonic + Servo
+```
+
+## Repository Structure
+
+```text
+Autonomous-Robot/
+├── arduino/
+│   └── autonomous_robot.ino
+├── controller/
+│   └── robot_controller.py
+├── docs/
+│   ├── finalRobot.png
+│   ├── software_diagram.png
+│   └── electrical_diagram.png
+└── README.md
+```
+
+## Future Improvements
+
+- **Mapping and localisation** – integrate a LiDAR or Time-of-Flight sensor to construct a 2D map of the surrounding environment, with wheel encoders to improve position estimation.
+- **Chassis redesign** – increase internal clearance, improve cable routing and make the electronics easier to access.
+- **Communication failsafe** – implement a heartbeat or watchdog system so the motors automatically stop if the Bluetooth connection is unexpectedly lost.
